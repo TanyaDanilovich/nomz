@@ -1,0 +1,467 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url("../fonts/GothamRounded-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url("../fonts/GothamRounded-Book.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url("../fonts/GothamRounded-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url("../fonts/GothamRounded-Medium.woff2") format("woff2");
+  font-weight: medium;
+  font-style: normal;
+  font-display: swap;
+}
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a {
+  text-decoration: none;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.input-radio {
+  display: inline-block;
+}
+
+.input-radio input {
+  display: none;
+}
+
+.input-radio label {
+  display: inline-block;
+  padding: 10px 35px;
+}
+
+/* Checked */
+.input-radio input[type=radio]:checked + label {
+  background: #6cace4;
+  color: #f8f9fa;
+}
+
+.input-radio input[type=radio] + label {
+  border: 1px solid #6cace4;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  text-transform: lowercase;
+  padding: 10px 35px;
+  font-size: 1.4rem;
+}
+
+.button-bordered {
+  background: #fff;
+  border: 1px solid #6cace4;
+  color: #6cace4;
+}
+.button-bordered:hover {
+  background: #6cace4;
+  color: #fff;
+}
+html {
+  font-family: "Gotham Rounded", sans-serif;
+  font-weight: normal;
+  font-size: 10px;
+  color: #4f4f4f;
+  overflow: overlay;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.header {
+  background-color: #6cace4;
+  position: relative;
+  margin-top: 30px;
+  padding: 10px 17px;
+}
+.header::before {
+  position: absolute;
+  content: "Subscribe+Save 15%";
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  left: calc(50% - 76.86px);
+  top: -23px;
+  letter-spacing: 0.03rem;
+}
+.header:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: #ffc107;
+}
+
+.shop-name {
+  color: white;
+  font-size: 4rem;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: 0.4rem;
+  padding-bottom: 7px;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__content-align {
+  width: 33.33%;
+}
+
+.header-icon__container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.header-icon {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+.search-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+  align-self: center;
+  align-items: center;
+}
+
+.shopping-card-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hamburger__line {
+  display: inline-block;
+  content: " ";
+  position: relative;
+  width: 25px;
+  height: 2px;
+  background: #f8f9fa;
+}
+.hamburger__line::before, .hamburger__line::after {
+  position: absolute;
+  content: " ";
+  width: 25px;
+  height: 2.5px;
+  background: #f8f9fa;
+  left: 0;
+}
+.hamburger__line::before {
+  top: 10px;
+}
+.hamburger__line::after {
+  top: -10px;
+}
+
+.hamurger__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-section {
+  padding: 15px;
+}
+
+.main-image-slider {
+  padding-bottom: 40px;
+}
+
+.main-slider-border {
+  width: 93%;
+  margin: 0 auto;
+}
+
+.main-image {
+  overflow: hidden;
+  width: 366px;
+  height: 100%;
+}
+
+.smoll-image-slider {
+  padding: 0 25px;
+}
+
+.smoll-slider-border {
+  overflow: hidden;
+  width: 100%;
+}
+
+.smoll-slider {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 15px;
+  width: 100%;
+}
+
+.smoll-slider-item {
+  width: 55px;
+  height: 100%;
+}
+.smoll-slider-item:first-child {
+  border: 2px solid #6c757d;
+}
+
+.smoll-image {
+  object-fit: cover;
+}
+
+.product__title {
+  font-size: 3rem;
+  font-weight: normal;
+  color: #343a40;
+}
+
+.revies__container {
+  display: flex;
+}
+
+.star {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url("../assets/svg/star.svg");
+}
+
+.revies__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.revie-item {
+  margin-right: 4px;
+  cursor: pointer;
+  color: #6cace4;
+}
+.revie-item:last-child {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.price__container {
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: 300;
+  border-bottom: 1px solid #6c757d;
+  padding: 10px 25px;
+}
+
+.options__title {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: medium;
+  letter-spacing: 0.3rem;
+}
+
+.options-buttons__container {
+  display: flex;
+  column-gap: 10px;
+}
+
+.accordion__wrapper {
+  width: 100%;
+  border-top: 1px solid #6c757d;
+  border-bottom: 1px solid #6c757d;
+}
+
+.accordion__title {
+  position: relative;
+  cursor: pointer;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #343a40;
+}
+.accordion__title:after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 2px;
+  background: #6c757d;
+}
+
+.quantity_icon {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: calc(50% - 5px);
+  left: calc(50% - 5px);
+}
+
+.quantity_change {
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  padding: 17px;
+  width: 50px;
+  display: flex;
+  background: #fff;
+}
+.quantity_change:hover {
+  background: #dee2e6;
+}
+.quantity_change:active {
+  background: #f8f9fa;
+}
+
+.product-quantity__container {
+  position: relative;
+  display: inline-flex;
+  border: 1px solid #6cace4;
+}
+
+.quantity__num__input {
+  border: none;
+  width: 150px;
+  text-align: center;
+  line-height: 100%;
+  font-size: 1.5rem;
+  color: #343a40;
+  font-weight: 300;
+  padding: 8px 25px;
+  background: #fff;
+}
+
+.quantity__minus {
+  left: 0;
+}
+
+.quantity__plus {
+  right: 0;
+}
+
+.purchase-button-group {
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  position: relative;
+  background: rgb(242, 242, 242);
+  cursor: pointer;
+  color: #6c757d;
+}
+.purchase-button-group::before {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: 16px;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #6c757d;
+}
+
+.purchase-button-group-active {
+  background-color: rgba(108, 172, 255, 0.3);
+  color: #343a40;
+}
+.purchase-button-group-active::before {
+  background: #6cace4;
+  border: 1px solid #212529;
+}
+
+/*# sourceMappingURL=style.css.map */
