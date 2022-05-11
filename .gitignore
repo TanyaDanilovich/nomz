@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+style.css.map
+
+sass/
+package.json
+assets/svg/instagramm.svg
