@@ -5,34 +5,57 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="./assets/svg/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="style.css">
-	<title>Document</title>
+	<title>nomz - energy bites assorted box</title>
 </head>
 
 <body>
 	<header>
-		<div class="wrapper">
+		<div class="header__wrapper">
 			<div class="header__container">
+				<div class="header__content-top">Subscribe+Save 15%</div>
 				<div class="header">
 					<div class="header__content">
+
 						<div class="header__content-align">
 							<nav class="navigation">
-								<div class="hamurger__container">
+								<div class="hamurger__container hidden">
 									<span class="hamburger__line"></span>
 								</div>
+								<ul class="navigation-list">
+									<li class="navigation-link">shop</li>
+									<li class="navigation-link">about us</li>
+									<li class="navigation-link">our story</li>
+									<li class="navigation-link">wholesale</li>
+								</ul>
 							</nav>
 						</div>
-						<div class="header__content-align">
-							<span class="shop-name">nomz</span>
+						<div class="header__content-align logo-centered">
+							<a href="https://nomz.com/">
+								<img class="logo header-logo" src="./assets/png/whitelogopng_x32@2x.webp" alt="">
+							</a>
+
+
 						</div>
 						<div class="header__content-align">
+							<div class="current-currency-container">
+								<div class="currency-image">
+									<img class="currency-image-inner" src="./assets/img/flag.jpg" alt="" width="32" height="32">
+								</div>
+								<span class="currency-text">CAD</span>
+							</div>
 							<div class="header__item header-icon__container">
-								<a href="#">
+								<a class="header-icon-link" href="#">
+									<object data="./assets/svg/user.svg" type="image/svg+xml"
+										class="header-icon user-icon"></object>
+								</a>
+								<a class="header-icon-link" href="#">
 									<object data="./assets/svg/glass-search.svg" type="image/svg+xml"
 										class="header-icon search-icon"></object>
 								</a>
-								<a href="#"><object data="./assets/svg/shopping-cart.svg" type="image/svg+xml"
-										class="header-icon shopping-card-icon"></object></a>
+								<a class="header-icon-link" href="#"><object data="./assets/svg/shopping-cart.svg"
+										type="image/svg+xml" class="header-icon shopping-card-icon"></object></a>
 							</div>
 						</div>
 					</div>
@@ -117,14 +140,14 @@
 						<label class="options__title" for="productsVariant">gift box</label>
 						<div type="radio" class="options-buttons__container" id="productsVariant">
 							<div class="input-radio options-button button__colored">
-								<input form="product__form" type="radio" name="variant-input" value="true" id="radio-with-gift"
-									checked></input>
+								<input form="product__form" checked type="radio" name="variant-input" value="true"
+									id="radio-with-gift" checked></input>
 								<label for="radio-with-gift">gift
 									box</label>
 							</div>
 							<div class="input-radio options-button button__bordered">
 								<input form="product__form" type="radio" name="variant-input" value="false"
-									id="radio-without-gift" checked></input>
+									id="radio-without-gift"></input>
 								<label for="radio-without-gift">no gift box (-$4)</label>
 							</div>
 
@@ -165,6 +188,52 @@
 						<div class="purchase-button-group">
 							<p class="purchase-button-text">One-time <span>Purchase</span></p>
 						</div>
+						<div class="subscription-details">
+							<div class="subscription-length">
+								<span class="subscription-length__title">Deliver Every</span>
+								<select class="subscription-length-item">
+									<option value="2442395899" selected="true">2 weeks</option>
+									<option value="2442428667">3 weeks</option>
+									<option value="2442461435">4 weeks</option>
+									<option value="2442494203">5 weeks</option>
+									<option value="2442526971">6 weeks</option>
+									<option value="2442559739">7 weeks</option>
+									<option value="2442592507">8 weeks</option>
+								</select>
+							</div>
+							<div class="subscription-benefits">
+								<h5>Subscription Benefits</h5>
+								<ul class="subscription-benefits-list">
+									<li class="subscription-benefits-item">
+										<svg aria-hidden="true" focusable="false" role="presentation"
+											class="icon-checkmark-circle" width="16px" height="16px" viewBox="0 0 512 512"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M256,48C141.31,48,48,141.31,48,256s93.31,208,208,208,208-93.31,208-208S370.69,48,256,48ZM364.25,186.29l-134.4,160a16,16,0,0,1-12,5.71h-.27a16,16,0,0,1-11.89-5.3l-57.6-64a16,16,0,1,1,23.78-21.4l45.29,50.32L339.75,165.71a16,16,0,0,1,24.5,20.58Z" />
+										</svg>
+										<span>Save 15% with every box</span>
+									</li>
+									<li class="subscription-benefits-item">
+										<svg aria-hidden="true" focusable="false" role="presentation"
+											class="icon-checkmark-circle" width="16px" height="16px" viewBox="0 0 512 512"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M256,48C141.31,48,48,141.31,48,256s93.31,208,208,208,208-93.31,208-208S370.69,48,256,48ZM364.25,186.29l-134.4,160a16,16,0,0,1-12,5.71h-.27a16,16,0,0,1-11.89-5.3l-57.6-64a16,16,0,1,1,23.78-21.4l45.29,50.32L339.75,165.71a16,16,0,0,1,24.5,20.58Z" />
+										</svg>
+										<span>Cancel Anytime</span>
+									</li>
+									<li class="subscription-benefits-item">
+										<svg aria-hidden="true" focusable="false" role="presentation"
+											class="icon-checkmark-circle" width="16px" height="16px" viewBox="0 0 512 512"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M256,48C141.31,48,48,141.31,48,256s93.31,208,208,208,208-93.31,208-208S370.69,48,256,48ZM364.25,186.29l-134.4,160a16,16,0,0,1-12,5.71h-.27a16,16,0,0,1-11.89-5.3l-57.6-64a16,16,0,1,1,23.78-21.4l45.29,50.32L339.75,165.71a16,16,0,0,1,24.5,20.58Z" />
+										</svg>
+										<span>Easily Swap Products &amp; Switch Shipping Dates</span>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 					<div class="product__description__container">
 						<p>Everyone has a favorite, which will be yours? Try ‘em all with our assorted box!</p>
@@ -183,13 +252,13 @@
 							<li>Two pistachio snack pouches</li>
 						</ul>
 						<p>2 energy bites in a pouch, 8 pouches total</p>
-						<p> <strong>Organic ingredients</strong>
+						<p> <strong>Organic ingredients</strong><br>
 							almond bites: almonds, dates, fair trade cocoa, sea salt
 							<span>coconut bites: almonds, dates, fair trade cocoa, coconut (sulfite free), sea salt</span>
 							<span>hazelnut bites: almonds, dates, fair trade cocoa, hazelnuts, sea salt</span>
 							<span>pistachio bites: almonds, dates, fair trade cocoa, pistachios, sea salt</span>
 						</p>
-						<p>Allergen warning: products contains tree nuts</p>
+						<p> <strong>Allergen warning:</strong> products contains tree nuts</p>
 
 						<div class="accordion__wrapper">
 							<div class="accordion-item">
@@ -252,13 +321,16 @@
 		</div>
 		<div class="additional-offer__section">
 			<div class="additional-offer__container">
-				<h2 class="additional-offer__title">You may also like</h2>
+				<h3 class="additional-offer__title">You may also like</h3>
 				<div class="additional-products__container">
 					<div class="additional-products-item">
-						<div class="additional-product-card">
-							<a href="#">
+						<div class="additional-product-card" id="additional-card-1">
+							<a href="">
 								<div class="additional-product-image">
-									<img src="./assets/img/hazelnutgrey_360x.webp" alt="">
+									<img id="additional-image-11" class="additional-image"
+										src="./assets/img/hazelnutgrey_360x.webp" alt="">
+									<img id="additional-image-12" class="background-additional-image "
+										src="./assets/img/hazelnutboxweb_834x.webp" alt="" width="360">
 								</div>
 								<div class="additional-product-meta">
 									<h4 class="additional-propuct__title">hazelnut energy bites</h4>
@@ -267,25 +339,13 @@
 									</div>
 									<a class="" href="">
 										<div class="revies__container">
-											<span class="star revie-item">
-
-											</span>
-											<span class="star revie-item">
-
-											</span>
-											<span class="star revie-item">
-
-											</span>
-											<span class="star revie-item">
-
-											</span>
-											<span class="star revie-item">
-
-											</span>
-											<span class="star revie-item">
-
-											</span>
-											<span class="revie-text revie-item">101 reveiws</span>
+											<span class="star revie-item"> </span>
+											<span class="star revie-item"> </span>
+											<span class="star revie-item"> </span>
+											<span class="star revie-item"> </span>
+											<span class="star revie-item"> </span>
+											<span class="star revie-item"> </span>
+											<span class="revie-text revie-item">102 reveiws</span>
 										</div>
 									</a>
 								</div>
@@ -294,15 +354,19 @@
 						</div>
 					</div>
 					<div class="additional-products-item">
-						<div class="additional-product-card">
+						<div class="additional-product-card" id="additional-card-2">
 							<a href="#">
 								<div class="additional-product-image">
-									<img src="./assets/img/hazelnutgrey_360x.webp" alt="">
+									<img id="additional-image-21" class="additional-image"
+										src="./assets/img/varietypack_360x.webp" alt="">
+									<img id="additional-image-22" class="background-additional-image "
+										src="./assets/img/custom_resized_8cb2d416-8860-44b9-8cf2-54701784191c_540x.webp" alt=""
+										width="360">
 								</div>
 								<div class="additional-product-meta">
-									<h4 class="additional-propuct__title">hazelnut energy bites</h4>
+									<h4 class="additional-propuct__title">ultimate variety pack</h4>
 									<div class="additional-product__price">
-										<span class="">from $ 40.00 CAD</span>
+										<span class="">$ 140.00 CAD</span>
 									</div>
 									<a class="" href="">
 										<div class="revies__container">
@@ -324,7 +388,7 @@
 											<span class="star revie-item">
 
 											</span>
-											<span class="revie-text revie-item">101 reveiws</span>
+											<span class="revie-text revie-item">151 reveiws</span>
 										</div>
 									</a>
 								</div>
@@ -333,37 +397,28 @@
 						</div>
 					</div>
 					<div class="additional-products-item">
-						<div class="additional-product-card">
+						<div class="additional-product-card" id="additional-card-3">
 							<a href="#">
 								<div class="additional-product-image">
-									<img src="./assets/img/hazelnutgrey_360x.webp" alt="">
+									<img id="additional-image-31" class="additional-image"
+										src="./assets/img/pistachiogrey_360x.webp" alt="">
+									<img id="additional-image-32" class="background-additional-image "
+										src="./assets/img/pistsquare_540x.webp" alt="" width="360">
 								</div>
 								<div class="additional-product-meta">
-									<h4 class="additional-propuct__title">hazelnut energy bites</h4>
+									<h4 class="additional-propuct__title">pistachio energy bites</h4>
 									<div class="additional-product__price">
 										<span class="">from $ 40.00 CAD</span>
 									</div>
 									<a class="" href="">
 										<div class="revies__container">
-											<span class="star revie-item">
-
-											</span>
-											<span class="star revie-item">
-
-											</span>
-											<span class="star revie-item">
-
-											</span>
-											<span class="star revie-item">
-
-											</span>
-											<span class="star revie-item">
-
-											</span>
-											<span class="star revie-item">
-
-											</span>
-											<span class="revie-text revie-item">101 reveiws</span>
+											<span class="star revie-item"> </span>
+											<span class="star revie-item"> </span>
+											<span class="star revie-item"> </span>
+											<span class="star revie-item"> </span>
+											<span class="star revie-item"> </span>
+											<span class="star revie-item"> </span>
+											<span class="revie-text revie-item">139 reveiws</span>
 										</div>
 									</a>
 								</div>
@@ -388,7 +443,7 @@
 					<div class="newsletter-input__container">
 						<input type="email" value="" placeholder="Email address" name="contact[email]" id="newsletter-email"
 							class="newsletter-input" autocorrect="off" autocapitalize="off">
-						<button type="submit" class="button button-colored" name="commit">Subscribe</button>
+						<button type="submit" class="button button-colored subscribr-button" name="commit">Subscribe</button>
 					</div>
 				</div>
 			</div>
@@ -405,13 +460,8 @@
 							<input type="email" value="" placeholder="Email address" name="contact[email]"
 								id="Email-newsletter" class="footer__newsletter-input" autocorrect="off" autocapitalize="off"
 								required="">
-							<button type="submit" class="footer__newsletter-button button button-bordered" name="commit">
-								<svg aria-hidden="true" focusable="false" role="presentation" class="icon-email"
-									viewBox="0 0 64 64">
-									<path
-										d="M63 52H1V12h62zM1 12l25.68 24h9.72L63 12M21.82 31.68L1.56 51.16m60.78.78L41.27 31.68">
-									</path>
-								</svg>
+							<button type="submit" class="footer__newsletter-button" name="commit">
+								<span class="background-image"></span>
 							</button>
 						</div>
 					</form>
@@ -422,21 +472,11 @@
 					<div class="footer__navigation__column">
 						<h3 class="footer__item__tittle">company</h3>
 						<ul class="footer__item__link-list">
-							<li>
-								<a href="">our story</a>
-							</li>
-							<li>
-								<a href="">nomz blog</a>
-							</li>
-							<li>
-								<a href="">nomz rewards</a>
-							</li>
-							<li>
-								<a href="">the nomz grant</a>
-							</li>
-							<li>
-								<a href="">customer reviews</a>
-							</li>
+							<li> <a href="">our story</a> </li>
+							<li> <a href="">nomz blog</a> </li>
+							<li> <a href="">nomz rewards</a> </li>
+							<li> <a href="">the nomz grant</a> </li>
+							<li> <a href="">customer reviews</a> </li>
 						</ul>
 
 					</div>
@@ -489,10 +529,14 @@
 					<li>
 						<a href="#" target="_blank" rel="noopener noreferrer" title="nomz on Facebook"></a>
 					</li>
+					<li>
+						<a href="#" target="_blank" rel="noopener noreferrer" title="nomz on Pinterest"></a>
+					</li>
 				</ul>
 			</div>
 		</div>
 	</footer>
+	<script src="./js/sctipt.js"></script>
 </body>
 
 </html>
