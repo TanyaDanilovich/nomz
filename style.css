@@ -857,7 +857,7 @@ h3 {
   display: block;
   height: 24px;
   width: 26px;
-  background-image: url("../assets/svg/email.svg");
+  background-image: url("./assets/svg/email.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -899,13 +899,13 @@ h3 {
   background-repeat: no-repeat;
 }
 .footer__social-links li:first-child {
-  background-image: url(../assets/svg/instagram.svg);
+  background-image: url(./assets/svg/instagram.svg);
 }
 .footer__social-links li:nth-child(2) {
-  background-image: url(../assets/svg/facebook.svg);
+  background-image: url(./assets/svg/facebook.svg);
 }
 .footer__social-links li:last-child {
-  background-image: url(../assets/svg/pinterest.svg);
+  background-image: url(./assets/svg/pinterest.svg);
 }
 
 /*# sourceMappingURL=style.css.map */
