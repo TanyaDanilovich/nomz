@@ -1,13 +1,20 @@
 (function () {
 	const HEADER = document.querySelector(".header__container");
-	window.onscroll = () => {
-		//console.log(window.pageYOffset);
+	const arrowUp = document.querySelector(".mobile-button-to-top");
 
-		if (window.pageYOffset > 140) {
-			HEADER.classList.add("header-active")
-		} else (
+	window.onscroll = () => {
+		if (window.pageYOffset > 107) {
+			HEADER.classList.add("header-opening");
+			HEADER.classList.add("header-active");
+		} else {
 			HEADER.classList.remove("header-active")
-		)
+			HEADER.classList.remove("header-opening")
+		}
+		if (window.pageYOffset > 1000) {
+			arrowUp.classList.remove("hidden");
+		} else {
+			arrowUp.classList.add("hidden")
+		}
 	}
 }());
 

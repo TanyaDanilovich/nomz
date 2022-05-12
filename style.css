@@ -243,29 +243,21 @@ body {
   }
 }
 
-.header-active {
-  position: fixed;
-  left: 0;
-  top: 0;
-}
-
-.header {
+.header__content-bottom {
   width: 100%;
-  transition: top 1s;
   z-index: 999;
   background: #6cace4;
   padding: 12px 30px;
   color: #fff;
   font-weight: 300;
   font-size: 1.8rem;
-  position: relative;
 }
 @media screen and (max-width: 768.7px) {
-  .header {
+  .header__content-bottom {
     padding: 10px 20px;
   }
 }
-.header:after {
+.header__content-bottom:after {
   content: "";
   position: absolute;
   height: 2px;
@@ -388,8 +380,27 @@ body {
 }
 
 .header__container {
+  position: relative;
   width: 100%;
+}
+
+.header-opening {
+  position: fixed;
+  transform: translateY(0);
+  top: -107px;
+  transition: transform 0.8s ease;
+}
+
+.header-active {
+  transition: transform 0.8s ease;
+  transform: translateY(107px);
+  top: -107px;
+  left: 0;
   z-index: 999;
+}
+
+.header__wrapper {
+  position: relative;
 }
 
 .navigation {
