@@ -51,3 +51,9 @@ CARD_3.addEventListener('mouseout', () => {
 	IMG_3.classList.remove('background-additional-image-active')
 })
 
+
+
+
+
+
+window.addEventListener("DOMContentLoaded", function () { console.log('страница загружена') })

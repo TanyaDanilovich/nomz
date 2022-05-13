@@ -117,7 +117,7 @@ select {
   display: inline-block;
   padding: 10px 40px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   .input-radio label {
     padding: 10px 20px;
   }
@@ -800,6 +800,184 @@ table {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+}
+
+.reviews__container {
+  padding: 5% 10%;
+  font-size: 1.4rem;
+}
+
+.all-revie-item {
+  color: #6c757d;
+  font-weight: 300;
+}
+
+.write-review__button {
+  padding: 3px 12px;
+  display: inline-block;
+  font-weight: 300;
+}
+
+.review-top__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.review__title {
+  font-weight: normal;
+  border-bottom: 2px solid #6cace4;
+  color: #6cace4;
+}
+
+.sort__button {
+  border: 1px solid #6c757d;
+  font-weight: 300;
+  padding: 5px 20px;
+  margin-bottom: 8px;
+}
+
+.sort__button__container {
+  position: relative;
+}
+
+.Select {
+  padding: 0 25px 0 10px;
+  position: relative;
+}
+.Select::after {
+  position: absolute;
+  content: url("../assets/svg/down-arrow.svg");
+  right: 0;
+  top: calc(50% - 9px);
+}
+
+.list-categories {
+  z-index: 500;
+  position: absolute;
+}
+
+.list-category {
+  font-weight: 300;
+  font-size: 1.2rem;
+  padding: 8px 40px;
+  border: 1px solid rgba(42, 42, 42, 0.1);
+  background-color: #fff;
+}
+
+.user-review__container {
+  display: flex;
+  justify-content: space-between;
+}
+.user-review__container:last-child {
+  flex-direction: column;
+  padding: 5px 0 5px 60px;
+}
+
+.long-review {
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+.user-review-item {
+  font-weight: 300;
+  display: flex;
+}
+
+.review__main__container {
+  padding-left: 30px;
+  padding: 20px 0 20px 40px;
+}
+
+.user-letter {
+  padding: 10px;
+  border-radius: 50%;
+  background: #6cace4;
+  color: #fff;
+  font-weight: normal;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  position: relative;
+}
+.user-letter::after {
+  position: absolute;
+  content: url("./assets/svg/checkmark-circle-green.svg");
+  bottom: 0px;
+  right: 0;
+  background: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.user-name {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #6cace4;
+}
+
+.user-block {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.answer__container {
+  margin-left: 30px;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  border-left: 2px solid #6cace4;
+}
+
+.answer-icon {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: #6cace4;
+  border-radius: 50%;
+  background-image: url("../assets/svg/home-house.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.answer-name {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #6cace4;
+  position: relative;
+}
+.answer-name::after {
+  position: absolute;
+  content: url("./assets/svg/checkmark-circle-orange.svg");
+  bottom: 0px;
+  left: -27px;
+  background: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.answer-date {
+  font-weight: 300;
+}
+
+.answer__text {
+  font-weight: 300;
+}
+
+.answer__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.answer__header-align {
+  display: flex;
+}
+.answer__header-align:first-child {
+  column-gap: 10px;
 }
 
 .purchase-options-buttons__container {
