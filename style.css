@@ -684,14 +684,36 @@ header {
     margin-bottom: 0px;
   }
 }
+.accordion__title:before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 1px;
+  background: #6c757d;
+  top: calc(50% - 1px);
+  right: 20%;
+  transform: rotate(90deg);
+  transition: transform 0.5s ease;
+}
 .accordion__title:after {
   position: absolute;
   content: "";
   width: 10px;
-  height: 2px;
+  height: 1px;
   background: #6c757d;
   top: calc(50% - 1px);
   right: 20%;
+  transition: transform 0.5s ease;
+}
+
+.open:before {
+  transition: transform 0.5s ease;
+  transform: rotate(0);
+}
+.open:after {
+  transition: transform 0.5s ease;
+  transform: rotate(-90deg);
+  opacity: 0;
 }
 
 .product__description__container {
@@ -744,7 +766,18 @@ table {
 }
 
 .accordion-item__content {
-  transition: all 3s;
+  opacity: 0;
+  max-height: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.opened {
+  max-height: 100%;
+  transition: 0.5s ease-in-out;
+}
+
+.opacity {
+  opacity: 1 !important;
 }
 
 .quantity_icon {
@@ -1151,6 +1184,8 @@ table {
 .subscription-details {
   background: rgb(242, 242, 242);
   padding: 25px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 h5 {

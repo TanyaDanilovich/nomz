@@ -62,7 +62,10 @@ SUBSCRIBE.addEventListener('touchstart', () => {
 	SUBSCRIBE.value = "true";
 	NOT_SUBSCRIBE.classList.remove('purchase-button-group-active');
 	NOT_SUBSCRIBE.value = "false";
-	document.querySelector(".subscription-details").classList.remove('hidden')
+	setTimeout(() => {
+		document.querySelector(".subscription-details").classList.remove('hidden')
+	}, 500)
+	document.querySelector(".subscription-details").classList.add('opacity')
 })
 
 NOT_SUBSCRIBE.addEventListener('touchstart', () => {
@@ -70,7 +73,11 @@ NOT_SUBSCRIBE.addEventListener('touchstart', () => {
 	SUBSCRIBE.value = "false";
 	NOT_SUBSCRIBE.classList.add('purchase-button-group-active');
 	NOT_SUBSCRIBE.value = "true";
-	document.querySelector(".subscription-details").classList.add('hidden')
+	document.querySelector(".subscription-details").classList.remove('opacity')
+	setTimeout(() => {
+		document.querySelector(".subscription-details").classList.add('hidden')
+	}, 400)
+
 })
 //END  Переключение одноразовой покупки или покупки с подпиской
 
@@ -78,7 +85,9 @@ NOT_SUBSCRIBE.addEventListener('touchstart', () => {
 //Скрытие отображение таблицы
 
 document.querySelector('.accordion__title').addEventListener('touchstart', () => {
-	document.querySelector('.accordion-item__content').classList.toggle('hidden')
+	document.querySelector('.accordion-item__content').classList.toggle('opened')
+	document.querySelector('.accordion-item__content').classList.toggle('opacity')
+	document.querySelector('.accordion__title').classList.toggle('open')
 })
 
 //END Скрытие отображение таблицы
@@ -92,3 +101,4 @@ SELECT.addEventListener('touchstart', () => {
 })
 
 //END Открытие спмска SELECT
+console.dir(document.querySelector('.accordion__title'));

@@ -69,41 +69,11 @@ function loadSmollSliderImage(url) {
 	})
 }
 
-const MAIN_SLIDER = document.querySelector('.main-slider');
-const MAIN_IMG = document.getElementById('mainImg');
-const SMOLL_SLIDER = document.querySelectorAll(".smoll-slider-item");
-
-
 
 
 window.addEventListener("DOMContentLoaded", function () {
 
-	//loadMainImage("");
-	//loadSmollSliderImage()
 
-	//Работа верхнего слайдера
-	if (window.outerWidth > 415) {
-		SMOLL_SLIDER.forEach(img => {
-			img.addEventListener("touchstart", (event) => {
-				SMOLL_SLIDER.forEach(el => { el.classList.remove("smoll-item-active") })
-				event.target.parentNode.classList.add("smoll-item-active")
-				for (let i = 0; i < 5; i++) {
-					MAIN_SLIDER.classList.remove(`sourse-tablet-${i}`);
-				}
-				MAIN_SLIDER.classList.add(`sourse-tablet-${event.target.id}`)
-			})
-		})
-	} else if (window.outerWidth > 321)
-		SMOLL_SLIDER.forEach(img => {
-			img.addEventListener("touchstart", (event) => {
-				SMOLL_SLIDER.forEach(el => { el.classList.remove("smoll-item-active") })
-				event.target.parentNode.classList.add("smoll-item-active")
-				for (let i = 0; i < 5; i++) {
-					MAIN_SLIDER.classList.remove(`sourse-mobile-${i}`);
-				}
-				MAIN_SLIDER.classList.add(`sourse-mobile-${event.target.id}`)
-			})
-		})
 
 
 })
